@@ -15,13 +15,15 @@ var config = {
     },
     
     resolve: {
-        alias: {}
+        alias: {
+            core: __dirname + 's/core/index'
+        }
     },
     
     output: {
         path: './dist/',
         publicPath: '/dist/',
-        filename: '[name].bundle.js'
+        filename: '[name]/bundle.js'
     },
     
     module: {
@@ -41,7 +43,7 @@ var config = {
         })
     ],
 
-    devtool: '#source-map',
+    // devtool: '#source-map',
 
     // my util mothod
     addVendor: function (name, path, isJqPlugin) {
