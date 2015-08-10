@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Map: Sample Stage</title>
+</head>
+<body>
+
+<div id="js-app" class="container">
+    
+    <section id="js-bg">
+        <ul class="bg_imgList">
+            <li class="bg_imgList_item">
+                <ul class="bg_objList">
+                    <li class="bg_objList_item"></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="js-ui" v-touch-move="moveBg">
+        <header>
+            <div class="header_leftBtn"></div>
+            <div class="header_currentLabel">{{current.title}}</div>
+            <app-status></app-status>
+        </header>
+        
+        <app-cell></app-cell>
+        
+        <app-arrowBtn></app-arrowBtn>
+        
+        <app-mini-map></app-mini-map>
+        
+        <div class="menuBtn" v-touch="showMenu"></div>
+    </section>
+
+    <app-menu></app-menu>
+
+    <section id="js-msgBox"></section>
+
+    <section id="js-shortTalk"></section>
+    
+    
+    <section id="js-modal" class="modal">
+        <div class="modal_overlay" v-touch="closeModal"></div>
+    </section>
+
+    <section id="js-curtain"></section>
+
+</div>
+
+<script type="text/javascript" src="/dist/vendors.js" charset="utf-8"></script>
+<script type="text/javascript" src="/dist/sample-stage/bundle.js" charset="utf-8"></script>
+</body>
+</html>
