@@ -10,7 +10,7 @@ python -m SimpleHTTPServer
 ## Architecture
 TODO: vue-loader の導入する
 
-*core*
+**▪ ︎core**  
 マップの共通機能  
 ダンジョンを歩き回ることができる機能を提供する
 - bg
@@ -30,11 +30,11 @@ TODO: vue-loader の導入する
     * map
 
 
-*quest*
+**▪ quest**  
 ダンジョンで探索を行う機能
 
-*raid*
+**▪ raid**  
 ダンジョンでレイドイベントを行う機能
 
-*treasure-hunt*
+**▪ treasure-hunt**  
 ダンジョンで宝探しイベントを行う機能
