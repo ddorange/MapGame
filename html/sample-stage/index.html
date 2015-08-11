@@ -18,11 +18,7 @@
         </ul>
     </section>
     
-    <header>
-        <div class="header_leftBtn"></div>
-        <div class="header_currentLabel">{{current.title}}</div>
-        <app-status></app-status>
-    </header>
+    <app-header status="{{status}}"></app-header>
     
     <section id="js-ui" v-touch-move="moveBg">
         
@@ -32,9 +28,9 @@
         
     </section>
 
-    <div class="menuBtn" v-on="click: showMenu">showMenu</div>
+    <div class="menuBtn" v-on="click: showMenu">Menu</div>
 
-    <app-mini-map></app-mini-map>
+    <section id="js-mimimap" class="minimap"></section>
     
     <app-menu></app-menu>
 
@@ -52,6 +48,17 @@
     <section id="js-curtain"></section>
 
 </div>
+
+<!-- template -->
+<script type="text/x-template" id="js-tmpl-header">
+    <header id="js-header" class="header">
+        <div class="header_info"></div>
+        <div class="header_status">
+            <div class="header_status_stamina">STAMINA: {{status.stamina}} / {{status.maxStamina}}</div>
+            <div class="header_status_exp">EXP: {{status.exp}} / {{status.maxExp}}</div>
+        </div>
+    </header>
+</script>
 
 <script type="text/javascript" src="/dist/vendors.js" charset="utf-8"></script>
 <script type="text/javascript" src="/dist/sample-stage/bundle.js" charset="utf-8"></script>
