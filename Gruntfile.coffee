@@ -29,13 +29,13 @@ module.exports = (grunt) ->
     watch:
       webpack:
         files: '<%= path.src %>**/*.js'
-        tasks: ['build_js']
+        tasks: ['build']
       gruntfile:
         files: 'Gruntfile.coffee'
         tasks: ['coffeelint']
       style:
         files: '<%= path.src %>**/*.styl'
-        tasks: ['build_style']
+        tasks: ['build']
 
   # Load Grunt plugins
   for plugin in matchdep.filterDev 'grunt-*'
