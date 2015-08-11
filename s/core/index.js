@@ -1,7 +1,11 @@
-'use strict';
+(function (global) {
 
-module.exports = {
-    setup: function () {
-        
-    }
-};
+    'use strict';
+
+    module.exports = {
+        setup: function () {
+            console.log('setup');
+        }
+    };
+
+})((this || 0).self || global);

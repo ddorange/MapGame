@@ -5,7 +5,6 @@
     <title>Map: Sample Stage</title>
 </head>
 <body>
-<h1>Map Game</h1>
 <div id="js-app" class="container">
     
     <section id="js-bg">
@@ -17,23 +16,25 @@
             </li>
         </ul>
     </section>
-
+    
+    <header>
+        <div class="header_leftBtn"></div>
+        <div class="header_currentLabel">{{current.title}}</div>
+        <app-status></app-status>
+    </header>
+    
     <section id="js-ui" v-touch-move="moveBg">
-        <header>
-            <div class="header_leftBtn"></div>
-            <div class="header_currentLabel">{{current.title}}</div>
-            <app-status></app-status>
-        </header>
         
         <app-cell></app-cell>
         
         <app-arrowBtn></app-arrowBtn>
         
-        <app-mini-map></app-mini-map>
-        
-        <div class="menuBtn" v-touch="showMenu"></div>
     </section>
 
+    <div class="menuBtn" v-on="click: showMenu">showMenu</div>
+
+    <app-mini-map></app-mini-map>
+    
     <app-menu></app-menu>
 
     <section id="js-msgBox"></section>
@@ -42,7 +43,7 @@
     
     
     <section id="js-modal" class="modal">
-        <div class="modal_overlay" v-touch="closeModal"></div>
+        <!-- <div class="modal_overlay" v-on="click: closeModal"></div> -->
     </section>
 
     <section id="js-loadnig"></section>
