@@ -3,7 +3,7 @@ $(function() {
     'use strict';
 
     var Vue     = require('vue'),
-        header  = require('core/header');
+        header  = require('core/header/vm');
 
     var app = {
         
