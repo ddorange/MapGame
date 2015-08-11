@@ -16,7 +16,7 @@ var config = {
     
     resolve: {
         alias: {
-            core: __dirname + '/s/core/index'
+            core: __dirname + '/s/core'
         }
     },
     
