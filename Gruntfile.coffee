@@ -30,9 +30,6 @@ module.exports = (grunt) ->
       webpack:
         files: '<%= path.src %>**/*.js'
         tasks: ['build']
-      gruntfile:
-        files: 'Gruntfile.coffee'
-        tasks: ['coffeelint']
       style:
         files: '<%= path.src %>**/*.styl'
         tasks: ['build']
