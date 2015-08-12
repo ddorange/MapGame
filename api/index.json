@@ -4,10 +4,10 @@
         "name": "ジョン"
     },
     "status": {
-        "stamina": 100,
+        "stamina": 30,
         "maxStamina": 100,
-        "exp": 0,
-        "maxExp": 0,
+        "exp": 28,
+        "maxExp": 1000,
         "attack": 200,
         "defence": 100
     },

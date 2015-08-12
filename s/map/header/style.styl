@@ -4,9 +4,9 @@
     position absolute
     top 0
     left 0
-    display flex
     width 320px
     height 45px
+    padding 8px
     background-color #33636d
     border 1px #9eeeeb solid
     border-top none
@@ -14,20 +14,28 @@
     box-shadow 0 1px 1px rgba(0,0,0,.4)
     box-sizing border-box
 
-.header_info
-    width 140px
-    height 32px
-    margin 5px 6px 7px
-    padding 8px
-    background-color #193f4a
-    border-radius 8px
-    box-sizing border-box
-
 .header_status
-    margin-top 5px
-
-.header_status_stamina,
-.header_status_exp
+    height 12px
     color #fff
     font-size 10px
-    margin-bottom 4px
+    line-height 12px
+
+.header_status_name
+    width 48px
+    margin-right 8px
+
+.header_status_val
+    width 58px
+    margin-right 8px
+
+.header_status_gauge
+    width 180px
+    height 12px
+    background-color #193f4a
+    box-sizing border-box
+    border-radius 2px
+    overflow hidden
+
+.header_status_gauge_bar
+    height 12px
+    background-color #9eeeeb
