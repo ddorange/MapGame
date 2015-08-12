@@ -30,7 +30,8 @@ var config = {
     module: {
         noParse: [],
         loaders: [
-            { test: /\.css$/, loader: 'style/url!file?name=[name].css!' }        // load css using link tag
+            { test: /\.css$/, loader: 'style/url!file?name=[name].css!' },      // load css using link tag
+            { test: /\.vue$/, loader: 'vue' }
         ]
     },
 

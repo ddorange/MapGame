@@ -4,7 +4,7 @@ $(function() {
 
     var Vue     = require('vue'),
         core    = require('core/index'),
-        header  = require('map/header/vm');
+        header  = require('map/header.vue');
 
 
     var app = {
