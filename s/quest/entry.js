@@ -3,7 +3,9 @@ $(function() {
     'use strict';
 
     var Vue     = require('vue'),
-        header  = require('core/header/vm');
+        core    = require('core/index'),
+        header  = require('map/header/vm');
+
 
     var app = {
         
@@ -28,6 +30,7 @@ $(function() {
 
     $.ajax('/api/index.json').then(function (data) {
         console.log('success', data);
+        core.setup();
         app.setup(data);
     }, function (error) {
         console.log('error', error);
