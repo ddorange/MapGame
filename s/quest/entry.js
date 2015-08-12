@@ -22,6 +22,12 @@ $(function() {
                     showMenu: function () {
                         console.log('showMenu');
                     },
+                    openCell: function (index, e) {
+                        $(e.target).toggleClass('on');
+                    },
+                    moveBg: function () {
+                        console.log('moveBg');
+                    }
                 }
             });
         }

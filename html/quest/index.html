@@ -19,15 +19,20 @@
         </ul>
     </section>
     
-    <app-header status="{{status}}"></app-header>
-    
-    <section id="js-ui" v-touch-move="moveBg">
-        
-        <app-cell></app-cell>
-        
-        <app-arrowBtn></app-arrowBtn>
-        
+    <section id="js-ui" class="uiContainer abs" v-on="click: moveBg">
+        <table class="cell">
+            <tr>
+                <td class="cell_data" v-on="click: openCell(1,$event)"></td>
+                <td class="cell_data" v-on="click: openCell(2,$event)"></td>
+            </tr>
+            <tr>
+                <td class="cell_data" v-on="click: openCell(3,$event)"></td>
+                <td class="cell_data" v-on="click: openCell(4,$event)"></td>
+            </tr>
+        </table>
     </section>
+
+    <app-header status="{{status}}"></app-header>
 
     <div class="menuBtn" v-on="click: showMenu">Menu</div>
 
