@@ -64,12 +64,9 @@
 
     'use strict';
 
-    var Vue = require('vue');
-
-    var header = Vue.extend({
-        props: ['status'],
-        template: '#js-tmpl-header'
-    });
+    var header = {
+        props: ['status']
+    };
 
     module.exports = header;
 

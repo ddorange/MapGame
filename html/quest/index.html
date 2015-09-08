@@ -54,27 +54,6 @@
     <section id="js-curtain"></section>
 
 </div>
-
-<!-- template -->
-<script type="text/x-template" id="js-tmpl-header">
-    <header id="js-header" class="header">
-        <div class="header_status box mbs">
-            <p class="header_status_name">STAMINA</p>
-            <p class="header_status_val tar">{{status.stamina}}/{{status.maxStamina}}</p>
-            <div class="header_status_gauge">
-                <div class="header_status_gauge_bar" style="width: {{Math.floor((status.stamina / status.maxStamina) * 100)}}%;"></div>
-            </div>
-        </div>
-        <div class="header_status box">
-            <p class="header_status_name">EXP</p>
-            <p class="header_status_val tar">{{status.exp}}/{{status.maxExp}}</p>
-            <div class="header_status_gauge">
-                <div class="header_status_gauge_bar" style="width: {{Math.floor((status.exp / status.maxExp) * 100)}}%;"></div>
-            </div>
-        </div>
-    </header>
-</script>
-
 <script type="text/javascript" src="/dist/vendors.js" charset="utf-8"></script>
 <script type="text/javascript" src="/dist/quest/bundle.js" charset="utf-8"></script>
 </body>
