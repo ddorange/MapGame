@@ -11,13 +11,12 @@ var config = {
     context: __dirname + '/s',
     
     entry: {
-        vendors: [ 'lodash', 'jquery', 'velocity', 'velocity.ui', 'vue' ],
+        vendors: [ 'lodash', 'jquery', 'vue' ],
     },
     
     resolve: {
         alias: {
-            core: __dirname + '/s/core',
-            map: __dirname + '/s/map'
+            core: __dirname + '/s/core'
         }
     },
     
@@ -63,9 +62,7 @@ var config = {
 // vendorを追加
 config.addVendor('lodash',      bower_dir + '/lodash/dist/lodash.underscore.min.js');
 config.addVendor('jquery',      bower_dir + '/jquery/dist/jquery.min.js');
-config.addVendor('velocity',    bower_dir + '/velocity/velocity.min.js', true);
-config.addVendor('velocity.ui', bower_dir + '/velocity/velocity.ui.min.js', true);
-config.addVendor('vue',         bower_dir + '/vue/dist/vue.js');
+config.addVendor('vue',         bower_dir + '/vue/dist/vue.min.js');
 
 
 // ./s 配下の entry.js を検索して config.entry  に追加する
