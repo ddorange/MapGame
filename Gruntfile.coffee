@@ -24,6 +24,14 @@ module.exports = (grunt) ->
         dest: '<%= path.dist %>'
         ext: '.css'
 
+    uglify:
+      js:
+        expand: true
+        cwd: '<%= path.dist %>'
+        src: ['**/*.js', '!vendors.js']
+        dest: '<%= path.dist %>'
+        ext: '.js'
+
     clean: [ '<%= path.dist %>**/*' ]
 
     watch:

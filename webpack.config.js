@@ -36,6 +36,8 @@ var config = {
     },
 
     plugins: [
+        // new webpack.optimize.UglifyJsPlugin(),
+        // new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
         new webpack.ProvidePlugin({
             _: 'lodash',
