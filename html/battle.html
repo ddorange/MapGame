@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Dungeon: Quest</title>
+    <link href="/dist/core/styl/index.css" type="text/css" rel="stylesheet" media="all">
+    <link href="/dist/battle/index.css" type="text/css" rel="stylesheet" media="all">
+</head>
+<body>
+<div id="js-app-battle" class="container">
+
+    <section class="boss"></section>
+
+    <section class="text-panel">
+        <p class="text-panel__name"></p>
+        <p class="text-panel__text"></p>
+    </section>
+
+    <ul class="deck"></ul>
+
+    <ul class="category-panel"></ul>
+    
+    <ul class="answer-panel"></ul>
+
+    <section class="timer"></section>
+
+    <section class="sphere-info"></section>
+
+    <header class="header">
+        <div class="menu-btn">MENU</div>
+        <div class="turn"></div>
+        <div class="drop-item"></div>
+    </header>
+    
+    <section id="js-modal" class="modal">
+        <!-- <div class="modal_overlay" v-on="click: closeModal"></div> -->
+    </section>
+
+    <section id="js-loadnig"></section>
+
+    <section id="js-curtain"></section>
+
+</div>
+<script type="text/javascript" src="/dist/vendors.js" charset="utf-8"></script>
+<script type="text/javascript" src="/dist/batle/bundle.js" charset="utf-8"></script>
+</body>
+</html>
