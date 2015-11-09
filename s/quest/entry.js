@@ -36,7 +36,7 @@ $(function() {
 
     $.ajax('/api/index.json').then(function (data) {
         console.log('success', data);
-        core.setup();
+        core.setup(false);
         app.setup(data);
     }, function (error) {
         console.log('error', error);

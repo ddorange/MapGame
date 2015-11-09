@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Game: top</title>
+    <link href="/dist/core/styl/index.css" type="text/css" rel="stylesheet" media="all">
+</head>
+<body>
+
+    <div id="js-app">
+        <div class="container"><!-- container -->
+
+            <router-view></router-view>
+
+            <app-header></app-header>
+
+            <app-footer></app-footer>
+
+            <app-overlay :params="overlay"></app-overlay>
+            
+            <component is="{{popup.view}}" :params="popup.params"></component>
+
+            <app-loading :params="loading"></app-loading>
+        
+        </div><!-- /container -->
+    </div>
+
+
+<script type="text/javascript" src="/dist/vendors.js" charset="utf-8"></script>
+<script type="text/javascript" src="/dist/app/bundle.js" charset="utf-8"></script>
+</body>
+</html>

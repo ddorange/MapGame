@@ -12,6 +12,7 @@ var config = {
     
     entry: {
         vendors: [ 'lodash', 'jquery', 'vue' ],
+        app:     [ './entry.js' ]
     },
     
     resolve: {
@@ -66,12 +67,11 @@ config.addVendor('vue',         bower_dir + '/vue/dist/vue.min.js');
 config.addVendor('vue-router',  bower_dir + '/vue-router/dist/vue-router.min.js');
 
 // ./s 配下の entry.js を検索して config.entry  に追加する
-_.each(glob.sync('./s/**/*/entry.js'), function (file) {
-    var regex = /(^.\/s\/)(.*)(?=\/entry.js)/,
-        name = file.toString().match(regex)[2];
-
-    config.entry[name] = './' + name + '/entry.js';
-});
+// _.each(glob.sync('./s/**/*/entry.js'), function (file) {
+//     var regex = /(^.\/s\/)(.*)(?=\/entry.js)/,
+//         name = file.toString().match(regex)[2];
+//     config.entry[name] = './' + name + '/entry.js';
+// });
 
 
 module.exports = config;
