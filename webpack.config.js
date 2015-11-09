@@ -63,7 +63,7 @@ var config = {
 config.addVendor('lodash',      bower_dir + '/lodash/dist/lodash.underscore.min.js');
 config.addVendor('jquery',      bower_dir + '/jquery/dist/jquery.min.js');
 config.addVendor('vue',         bower_dir + '/vue/dist/vue.min.js');
-
+config.addVendor('vue-router',  bower_dir + '/vue-router/dist/vue-router.min.js');
 
 // ./s 配下の entry.js を検索して config.entry  に追加する
 _.each(glob.sync('./s/**/*/entry.js'), function (file) {
