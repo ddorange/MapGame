@@ -21,17 +21,20 @@
             this.router = new VueRouter();
 
             this.router.map({
-                '/mypage': {
+                '/error': {
+                    component: require('./error/index.vue')
+                },
+                '/mypage/index': {
                     component: require('./mypage/index.vue')
                 },
-                '/list': {
+                '/list/index': {
                     component: require('./list/index.vue')
                 }
             });
 
             // 見つからなかったルートのリダイレクト
             this.router.redirect({
-                '*': '/mypage'
+                '*': '/error'
             });
 
             // Routerを起動する

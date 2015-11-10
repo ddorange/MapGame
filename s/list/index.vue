@@ -4,13 +4,8 @@
 <template>
 <section class="app-content list">
 
-    <h1 class="fzl tac pm">{{text}}</h1>
-
-    <ul class="pm">
-        <li>
-            <a class="fc-link" v-link="{ path: 'mypage' }">goto mypage</a>
-        </li>
-    </ul>
+    <h1 class="fsl tac pm">{{title}}</h1>
+    <p class="fc-info tac">{{test}}</p>
 
 </section>
 </template>
@@ -20,9 +15,24 @@ module.exports = {
 
     name: 'list',
 
+    route: {
+        data: function (transition) {
+            $.ajax({
+                url: '/ajax/list/index',
+                type: 'GET'
+            }).then(function (data) {
+                console.log('ajax success: ',data);
+                transition.next(data);
+            }, function (error) {
+                console.log('ajax error: ', error);
+                transition.redirect('/error');
+            });
+        }
+    },
+
     data: function () {
         return {
-            text: 'list'
+            title: 'list'
         }
     },
 
