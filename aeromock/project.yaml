@@ -1,0 +1,12 @@
+# 静的ファイル関連
+static:
+  root: ../
+
+# Ajaxデータファイル関連
+ajax:
+  root: ./ajax
+  commonFiles: []
+
+# ルーティング関連
+routing:
+  script: ./routing.groovy
