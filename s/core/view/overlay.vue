@@ -4,7 +4,7 @@
 </style>
 
 <template>
-    <section class="app-overlay full-screen" v-show="show" v-transition="anim-fade"></section>
+    <section class="app-overlay full-screen" v-show="show" v-transition="anim-fade" v-on:click="hidePopup"></section>
 </template>
 
 <script>
@@ -26,6 +26,11 @@ module.exports = {
         },
         OVERLAY_HIDE: function () {
             this.show = false;
+        }
+    },
+    methods: {
+        hidePopup: function () {
+            this.$dispatch('POPUP_HIDE');
         }
     }
 };

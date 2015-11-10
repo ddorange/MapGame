@@ -21,7 +21,7 @@ module.exports = {
                 url: '/ajax/mypage/index',
                 type: 'GET'
             }).then(function (data) {
-                console.log('ajax success: ',data);
+                console.log('ajax success: ', data);
                 transition.next(data);
             }, function (error) {
                 console.log('ajax error: ', error);

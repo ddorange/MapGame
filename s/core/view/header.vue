@@ -29,17 +29,7 @@ module.exports = {
 
     name: 'app-header',
 
-    data: function () {
-        return {
-            text: 'header',
-            status: {
-                stamina: 20,
-                maxStamina: 100,
-                exp: 10,
-                maxExp: 500
-            }
-        }
-    },
+    props: ['status'],
 
     methods: {
         showMenu: function () {
