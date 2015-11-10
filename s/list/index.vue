@@ -6,6 +6,18 @@
 
     <h1 class="fsl tac pm">{{title}}</h1>
     <p class="fc-info tac">{{test}}</p>
+    
+    <ul class="segment segment--col3 mtm">
+        <li class="segment__item" v-on:click="switchTab('characters', $event)" v-bind:class="{ 'is-selected': charactersTab}">character</li>
+        <li class="segment__item" v-on:click="switchTab('wepons',     $event)" v-bind:class="{ 'is-selected': weponsTab}">wepon</li>
+        <li class="segment__item" v-on:click="switchTab('items',      $event)" v-bind:class="{ 'is-selected': itemsTab}">item</li>
+    </ul>
+
+    <ul id="js-tab-content" class="mm">
+        <template v-for="item in currentContent">
+            <li>{{$index}}. {{item.name}}</li>
+        </template>
+    </ul>
 
 </section>
 </template>
@@ -32,12 +44,33 @@ module.exports = {
 
     data: function () {
         return {
-            title: 'list'
+            title: 'list',
+            characters: [],
+            wepons: [],
+            items: [],
+            currentTab: 'characters',
+            tabLabel: [ 'characters', 'wepons', 'items' ],
+        }
+    },
+    computed: {
+        charactersTab: function () {
+            return this.currentTab === 'characters';
+        },
+        weponsTab: function () {
+            return this.currentTab === 'wepons';
+        },
+        itemsTab: function () {
+            return this.currentTab === 'items';
+        },
+        currentContent: function () {
+            return this[this.currentTab]
         }
     },
 
     methods: {
-
+        switchTab: function (target, e) {
+            this.currentTab = target;
+        }
     }
 };
 </script>

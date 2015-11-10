@@ -1,0 +1,46 @@
+/* # Segment */
+@charset "UTF-8"
+
+.segment
+    @extend .box
+    @extend .bpc
+    .segment__item:first-child
+        border-radius 8px 0 0 8px
+    .segment__item:last-child
+        border-radius 0 8px 8px 0
+        border-right 1px $brown solid
+
+
+ // ２つのとき
+.segment--col2
+    .segment__item
+        width 148px 
+
+ // ３つのとき
+.segment--col3
+    .segment__item
+        width  99px 
+
+ // ３つのとき
+.segment--col4
+    .segment__item
+        width  74px 
+
+
+.segment__item
+    box-sizing border-box
+    height 24px
+    background-color $beige
+    border-top 1px $brown solid
+    border-bottom 1px $brown solid
+    border-left 1px $brown solid
+    color $brown-deep
+    line-height 22px
+    text-align center
+
+    // 選択している状態
+    &.is-selected
+        color $white
+        background-color $blue
+        // box-shadow 0px 1px 1px $shadow-color inset
+    

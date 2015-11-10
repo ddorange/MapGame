@@ -1,14 +1,6 @@
 test: これは/list/indexのデータです
 
-characters: []
-
-wepons:
-  -
-    name: 45口径46cm3連装砲塔
-  -
-    name: 60口径15.5cm3連装砲塔
-
-unit:
+characters:
   -
     id: 1
     name: ヤマト
@@ -25,3 +17,17 @@ unit:
     id: 4
     name: コンゴウ
     TYPE: battleship
+
+wepons:
+  -
+    name: 45口径46cm3連装砲塔
+  -
+    name: 60口径15.5cm3連装砲塔
+
+items:
+  -
+    name: ボーキサイト
+  -
+    name: 鉄
+  -
+    name: 弾薬
