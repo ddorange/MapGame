@@ -1,6 +1,4 @@
 <style lang="stylus">
-.mypage
-    height 460px
 </style>
 
 <template>

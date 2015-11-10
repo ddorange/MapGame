@@ -1,6 +1,4 @@
 <style lang="stylus">
-.list
-    height 460px
 </style>
 
 <template>
