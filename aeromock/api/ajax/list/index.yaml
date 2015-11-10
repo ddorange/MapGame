@@ -1,0 +1,27 @@
+test: これは/list/indexのデータです
+
+characters: []
+
+wepons:
+  -
+    name: 45口径46cm3連装砲塔
+  -
+    name: 60口径15.5cm3連装砲塔
+
+unit:
+  -
+    id: 1
+    name: ヤマト
+    TYPE: battleship
+  -
+    id: 2
+    name: ムサシ
+    TYPE: battleship
+  -
+    id: 3
+    name: シナノ
+    TYPE: aircraft carrier
+  -
+    id: 4
+    name: コンゴウ
+    TYPE: battleship

@@ -4,7 +4,7 @@ static:
 
 # Ajaxデータファイル関連
 ajax:
-  root: ./ajax
+  root: ./api
   commonFiles: []
 
 # ルーティング関連
