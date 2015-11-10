@@ -36,10 +36,11 @@ module.exports = (grunt) ->
 
     watch:
       webpack:
-        files: '<%= path.src %>**/*.js'
-        tasks: ['build']
-      style:
-        files: '<%= path.src %>**/*.styl'
+        files: [
+          '<%= path.src %>**/*.js',
+          '<%= path.src %>**/*.styl',
+          '<%= path.src %>**/*.vue'
+        ]
         tasks: ['build']
 
   # Load Grunt plugins
