@@ -26,7 +26,7 @@
         components: {
             'app-header':   require('core/view/header.vue'),
             'app-footer':   require('core/view/footer.vue'),
-            // 'app-menu':     require('core/view/menu.vue'),
+            'app-menu':     require('core/view/menu.vue'),
             'app-overlay':  require('core/view/overlay.vue'),
             'app-loading':  require('core/view/loading.vue')
         },
@@ -50,12 +50,12 @@
                 this.popup.view = name;
             },
             POPUP_HIDE: function () {
-                this.overlay = false;
+                this.$broadcast('OVERLAY_HIDE');
                 this.popup.view = '';
                 this.popup.params = null;
             },
             MENU_SHOW: function () {
-                this.overlay = true;
+                this.$broadcast('OVERLAY_SHOW');
                 this.popup.view = 'app-menu';
             }
         },
@@ -65,14 +65,15 @@
 
             setTimeout(function () {
                 self.$broadcast('LOADING_HIDE');
-            }, 3000);
+            }, 10);
         }
     };
 
 
     // start
     $(function() {
-        router.setup(option, '#js-app');
+        var r = router.setup(option, '#js-app');
+        window.app = r.router.app;
     });
 
 })();
