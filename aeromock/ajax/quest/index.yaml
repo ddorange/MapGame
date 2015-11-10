@@ -1,13 +1,3 @@
-user: 
-  level: 3
-  name: "ジョン"
-status: 
-  stamina: 30
-  maxStamina: 100
-  exp: 28
-  maxExp: 1000
-  attack: 200
-  defence: 100
 area: 
   name: "陰深き原始林"
   description: "小枝を踏み折れば、骨を折ってあがないとする森"

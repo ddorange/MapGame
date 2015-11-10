@@ -1,0 +1,9 @@
+status:
+  level: 3
+  name: "ジョン"
+  stamina: 30
+  maxStamina: 100
+  exp: 28
+  maxExp: 1000
+  attack: 200
+  defence: 100
