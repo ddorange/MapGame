@@ -1,40 +1,31 @@
 # Map Game
-DQMSLみたいなマップをつくる
+- 普通のソシャゲっぽいマイページ
+- キャラクター等のリスト画面
+- DQMSLみたいなマップ画面
+- グランブルーみたいなバトル画面
 
 ## Start
 ```
-cd ./Mapgame
-python -m SimpleHTTPServer
+cd ./path/to/Mapgame
+npm run aeromock
 ```
 
 ## Architecture
-TODO: vue-loader の導入する
+#### /mypage
+- お知らせモーダル
 
-**▪ ︎core**  
-マップの共通機能  
-ダンジョンを歩き回ることができる機能を提供する
-- bg
-- header
-    * stamina
-    * exp
-- ui
-    * touch-move
-    * arrow
-    * cell
-- minimap
-- curtain
-- msgbox
-- modal
-- menu
-    * item
-    * map
+#### /list
+タブ
+- /list/characters
+- /list/wepons
+- /list/items
 
+詳細
+- /list/{{tab}}/detail/{{id}}
 
-**▪ quest**  
-ダンジョンで探索を行う機能
+#### /error
+- マイページへもどるボタン
 
-**▪ raid**  
-ダンジョンでレイドイベントを行う機能
-
-**▪ treasure-hunt**  
-ダンジョンで宝探しイベントを行う機能
+#### /quest
+- マップ選択
+- マップ
