@@ -26,10 +26,10 @@
                 '/error': {
                     component: require('./../error/index.vue')
                 },
-                '/mypage/index': {
+                '/mypage': {
                     component: require('./../mypage/index.vue')
                 },
-                '/list/index': {
+                '/list': {
                     component: require('./../list/index.vue')
                 }
             });
