@@ -36,9 +36,10 @@
                 if (!_.isString(name)) {
                     return false;
                 }
-
-                this.overlay = true;
+                console.log(name);
+                this.$broadcast('OVERLAY_SHOW');
                 this.popup.view = name;
+                this.popup.params = data;
             },
             POPUP_HIDE: function () {
                 this.$broadcast('OVERLAY_HIDE');
