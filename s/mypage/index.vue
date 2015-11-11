@@ -7,46 +7,63 @@
     <h1 class="panel mm pm tac">{{title}}</h1>
     
     <p class="fc-info tac">{{test}}</p>
+    <div class="btnBox mm">
+        <div class="btn" v-on:click="showNoti">お知らせ</div>
+    </div>
 
 </section>
 </template>
 
 <script>
-module.exports = {
+(function () {
 
-    name: 'mypage',
+    'use strict';
 
-    route: {
-        data: function (transition) {
-            $.ajax({
-                url: '/ajax/mypage/index',
-                type: 'GET'
-            }).then(function (data) {
-                console.log('ajax success: ', data);
-                transition.next(data);
-            }, function (error) {
-                console.log('ajax error: ', error);
-                transition.redirect('/error');
-            });
+    var Vue       = require('vue'),
+        modalNoti = require('./modal-noti.vue');
+
+    // ページ固有のvMを登録
+    Vue.component('mypage-modal-noti', Vue.extend(modalNoti));
+    
+    module.exports = {
+
+        name: 'mypage',
+
+        route: {
+            data: function (transition) {
+                var self = this;
+
+                $.ajax({
+                    url: '/ajax/mypage/index',
+                    type: 'GET'
+                }).then(function (data) {
+                    console.log('ajax success: ', data);
+                    self.$dispatch('UPDATE', data);
+                    transition.next(data);
+                }, function (error) {
+                    console.log('ajax error: ', error);
+                    transition.redirect('/error');
+                });
+            }
         },
-        activate: function (transition) {
-            console.log('hook-example activated!');
-            transition.next();
+
+        data: function () {
+            return {
+                title: 'mypage'
+            }
         },
-        deactivate: function (transition) {
-            console.log('hook-example deactivated!');
-            transition.next();
+
+        methods: {
+            showNoti: function () {
+                var self = this;
+
+                $.ajax({
+                    url: '/ajax/mypage/noti'
+                }).then(function (data) {
+                    self.$dispatch('POPUP_SHOW', 'mypage-modal-noti', data);
+                });
+            }
         }
-    },
-
-    data: function () {
-        return {
-            title: 'mypage'
-        }
-    },
-
-    methods: {
-
-    }
-};
+    };
+})();
 </script>
