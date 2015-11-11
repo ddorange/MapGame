@@ -10,7 +10,7 @@
 <template>
     <section class="app-loading full-screen" v-show="show">
         <p class="mbm">loading...</p>
-        <p v-if="params && params.tips">tips: {{params.tips}}</p>
+        <p v-if="params && params.text">tips: {{params.text}}</p>
     </section>
 </template>
 

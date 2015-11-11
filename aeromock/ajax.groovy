@@ -1,1 +1,1 @@
-return ["ajax/common/status" ]
+return ["ajax/_common" ]

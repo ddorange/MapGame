@@ -7,3 +7,7 @@ status:
   maxExp: 1000
   attack: 200
   defence: 100
+
+tips:
+  imageId: 1
+  text: とても役に立つTips

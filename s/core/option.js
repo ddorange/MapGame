@@ -12,27 +12,36 @@
                     exp: 0,
                     maxExp: 100
                 },
+                tips: {
+                    text: '',
+                    imageId: 1
+                },
                 popup: {
                     view: '',
                     params: {}
-                },
-                loading: {
-                    tips: 'とても役に立つTips',
-                    imageId: 1
                 }
             };
         },
         
         components: {
-            'app-header':   require('core/view/header.vue'),
-            'app-footer':   require('core/view/footer.vue'),
-            'app-menu':     require('core/view/menu.vue'),
-            'app-overlay':  require('core/view/overlay.vue'),
-            'app-loading':  require('core/view/loading.vue')
+            'app-header':   require('./view/header.vue'),
+            'app-footer':   require('./view/footer.vue'),
+            'app-menu':     require('./view/menu.vue'),
+            'app-overlay':  require('./view/overlay.vue'),
+            'app-loading':  require('./view/loading.vue')
         },
         
         events: {
-            POPUP_SHOW: function (name) {
+            UPDATE: function (data) {
+                var self = this;
+
+                _.each(data, function (val, name) {
+                    if (self.$data.hasOwnProperty(name)) {
+                        self[name] = val;
+                    }
+                });
+            },
+            POPUP_SHOW: function (name, data) {
                 if (!_.isString(name)) {
                     return false;
                 }
