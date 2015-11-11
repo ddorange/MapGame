@@ -48,16 +48,16 @@
         <div class="app-footer__corner app-footer__corner--left"></div>
         <ul class="app-footer__list bfj box bpj">
             <li class="app-footer__list__item">
-                <a class="fc-link" v-link="{ path: '/mypage/index' }">mypage</a>
+                <a class="fc-primary" v-link="{ path: '/mypage' }">mypage</a>
             </li>
             <li class="app-footer__list__item">
-                <a class="fc-link" v-link="{ path: '/list/index' }">list</a>
+                <a class="fc-primary" v-link="{ path: '/list' }">list</a>
             </li>
             <li class="app-footer__list__item">
-                <a class="fc-link" v-link="{ path: '/error' }">error</a>
+                <a class="fc-primary" v-link="{ path: '/error' }">error</a>
             </li>
             <li class="app-footer__list__item">
-                <a class="fc-link" v-link="{ path: '/hoge' }">hoge</a>
+                <a class="fc-primary" v-link="{ path: '/hoge' }">hoge</a>
             </li>
         </ul>
         <div class="app-footer__corner app-footer__corner--right" v-on:click="showMenu">

@@ -1,24 +1,26 @@
 <style lang="stylus">
 </style>
 <template>
-    <div class="app-modal" v-transition="anim-modal">
-        <h1 class="app-modal-title">menu</h1>
-        <hr>
-        <ul class="mm">
-            <li class="mbm">
-                <a class="fc-link" v-link="{ path: '/mypage/index' }">mypage</a>
+    <div class="modal" v-transition="anim-modal">
+        
+        <h1 class="modal__header">menu</h1>
+        
+        <ul class="list">
+            <li class="list__item">
+                <a class="fc-primary" v-link="{ path: '/mypage' }">mypage</a>
             </li>
-            <li class="mbm">
-                <a class="fc-link" v-link="{ path: '/list/index' }">list</a>
+            <li class="list__item">
+                <a class="fc-primary" v-link="{ path: '/list' }">list</a>
             </li>
-            <li class="mbm">
-                <a class="fc-link" v-link="{ path: '/error' }">error</a>
+            <li class="list__item">
+                <a class="fc-primary" v-link="{ path: '/error' }">error</a>
             </li>
-            <li class="mbm">
-                <a class="fc-link" v-link="{ path: '/hoge' }">hoge</a>
+            <li class="list__item">
+                <a class="fc-primary" v-link="{ path: '/hoge' }">hoge</a>
             </li>
         </ul>
-        <p class="fc-danger tac" v-on:click="hidePopup">close</p>
+
+        <p class="fc-danger tac mm" v-on:click="hidePopup">close</p>
     </div>
 </template>
 <script>

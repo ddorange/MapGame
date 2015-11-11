@@ -4,7 +4,8 @@
 <template>
 <section class="app-content mypage">
     
-    <h1 class="fsl tac pm">{{title}}</h1>
+    <h1 class="panel mm pm tac">{{title}}</h1>
+    
     <p class="fc-info tac">{{test}}</p>
 
 </section>

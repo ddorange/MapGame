@@ -1,0 +1,47 @@
+/* # Button */
+@charset "UTF-8"
+
+.btnBox
+    @extend .box
+    @extend .bpj
+
+.btn
+    position relative
+    display block
+    width 296px
+    height 24px
+    box-sizing border-box
+    border-radius 8px
+    background-color $brown
+    box-shadow 0 -4px 0 rgba(0,0,0,0.3) inset
+    color $white
+    font-size $font-size-m
+    text-align center
+    line-height 20px
+
+    &.is-on
+        box-shadow none
+
+    &.is-off
+        &::after 
+            content ""
+            position absolute
+            top 0px
+            left 0px
+            display block
+            width 100%
+            height 100%
+            border-radius 8px
+            background-color rgba(255,255,255,0.5)
+
+.btn--half 
+    width 135px
+
+.btn-warning
+    background-color $yellow
+
+.btn--danger
+    background-color $red
+
+.btn--link
+    background-color $blue

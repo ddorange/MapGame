@@ -4,8 +4,7 @@
 <template>
 <section class="app-content list">
 
-    <h1 class="fsl tac pm">{{title}}</h1>
-    <p class="fc-info tac">{{test}}</p>
+    <h1 class="panel mm pm tac">{{title}}</h1>
     
     <ul class="segment segment--col3 mtm">
         <li class="segment__item" v-on:click="switchTab('characters', $event)" v-bind:class="{ 'is-selected': charactersTab}">character</li>
@@ -52,6 +51,7 @@ module.exports = {
             tabLabel: [ 'characters', 'wepons', 'items' ],
         }
     },
+    
     computed: {
         charactersTab: function () {
             return this.currentTab === 'characters';
