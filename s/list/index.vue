@@ -12,9 +12,9 @@
         <li class="segment__item" v-on:click="switchTab('items',      $event)" v-bind:class="{ 'is-selected': itemsTab}">item</li>
     </ul>
 
-    <ul id="js-tab-content" class="mm">
+    <ul id="js-tab-content" class="list mtl">
         <template v-for="item in currentContent">
-            <li>{{$index}}. {{item.name}}</li>
+            <li class="list__item">{{$index}}. {{item.name}}</li>
         </template>
     </ul>
 
