@@ -1,4 +1,4 @@
-test: これは/list/indexのデータです
+# /list
 
 characters:
   -
@@ -31,3 +31,15 @@ items:
     name: 鉄
   -
     name: 弾薬
+
+
+# _commmonのオーバーライト
+status:
+  level: 3
+  name: "ジョン"
+  stamina: 50
+  maxStamina: 100
+  exp: 28
+  maxExp: 1000
+  attack: 200
+  defence: 100
