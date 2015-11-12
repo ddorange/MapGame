@@ -2,7 +2,7 @@
 
     'use strict';
 
-    var core = require('core/index');
+    var core = require('core');
 
     var option = {
         

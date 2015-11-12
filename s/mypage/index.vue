@@ -20,7 +20,7 @@
     'use strict';
 
     var Vue       = require('vue'),
-        core      = require('core/index'),
+        core      = require('core'),
         modalNoti = require('./component/modal-noti.vue');
 
     // ページ固有のvMを登録

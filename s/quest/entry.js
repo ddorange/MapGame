@@ -3,7 +3,7 @@ $(function() {
     'use strict';
 
     var Vue     = require('vue'),
-        core    = require('core/index'),
+        core    = require('core');,
         header  = require('map/header.vue');
 
 

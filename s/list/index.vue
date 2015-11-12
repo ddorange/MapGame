@@ -26,7 +26,7 @@
 
     'use strict';
 
-    var core      = require('core/index');
+    var core      = require('core');
 
     module.exports = {
 
