@@ -20,7 +20,8 @@
     'use strict';
 
     var Vue       = require('vue'),
-        modalNoti = require('./modal-noti.vue');
+        core      = require('core/index'),
+        modalNoti = require('./component/modal-noti.vue');
 
     // ページ固有のvMを登録
     Vue.component('mypage-modal-noti', Vue.extend(modalNoti));
@@ -29,27 +30,12 @@
 
         name: 'mypage',
 
-        route: {
-            data: function (transition) {
-                var self = this;
-
-                $.ajax({
-                    url: '/ajax/mypage/index',
-                    type: 'GET'
-                }).then(function (data) {
-                    console.log('ajax success: ', data);
-                    self.$dispatch('UPDATE', data);
-                    transition.next(data);
-                }, function (error) {
-                    console.log('ajax error: ', error);
-                    transition.redirect('/error');
-                });
-            }
-        },
+        mixins: [ core.mixins.route ],
 
         data: function () {
             return {
-                title: 'mypage'
+                title: 'mypage',
+                initDataUrl: '/ajax/mypage/index'
             }
         },
 
