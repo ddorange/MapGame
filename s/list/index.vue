@@ -37,6 +37,7 @@
         data: function () {
             return {
                 title: 'list',
+                initDataUrl: '/ajax/list/index',
                 characters: [],
                 wepons: [],
                 items: [],
