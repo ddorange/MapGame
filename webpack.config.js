@@ -11,7 +11,7 @@ var config = {
     context: __dirname + '/s',
     
     entry: {
-        vendors: [ 'lodash', 'jquery', 'vue' ],
+        vendors: [ 'lodash', 'jquery', 'vue', 'vue-router' ],
         app:     [ './entry.js' ]
     },
     
