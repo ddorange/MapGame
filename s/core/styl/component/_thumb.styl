@@ -1,0 +1,39 @@
+/* # thumb */
+@charset "UTF-8"
+
+.thumb
+    $size = 56px
+    position relative
+    width $size
+    height $size
+    border-radius 6px
+    background-color $brown
+    box-sizing border-box
+    img 
+        position absolute
+        width 48px
+        height 48px
+
+.thumb__label
+    $h = 16px
+    position absolute
+    left 0
+    bottom 0
+    width 56px
+    height $h
+    box-sizing border-box
+    padding 0 4px
+    background-color rgba(0,0,0,0.5)
+    border-radius 0 0 6px 6px
+    font-size $font-size-s
+    text-align center
+    line-height $h
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
+
+.thumbList
+    display flex
+    flex-wrap wrap
+    .thumb
+        margin 0 4px 4px 0
