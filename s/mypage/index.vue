@@ -4,9 +4,10 @@
 <template>
 <section class="app-content mypage">
     
-    <h1 class="panel mm pm tac">{{title}}</h1>
+    <h1 class="title title--lg mtm">{{title}}</h1>
     
-    <p class="fc-info tac">{{test}}</p>
+    <p class="fc-info tac mm">{{test}}</p>
+    
     <div class="btnBox mm">
         <div class="btn" v-on:click="showNoti">お知らせ</div>
     </div>
@@ -34,7 +35,7 @@
 
         data: function () {
             return {
-                title: 'mypage',
+                title: 'マイページ',
                 initDataUrl: '/ajax/mypage/index'
             }
         },

@@ -4,7 +4,7 @@
 <template>
 <section class="app-content error">
 
-    <h1 class="panel mm pm tac">Error</h1>
+    <h1 class="title title--lg mtm">エラー</h1>
 
     <div class="btnBox mm">
         <a class="btn" v-link="{ path: '/mypage' }">マイページへもどる</a>
