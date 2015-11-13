@@ -8,12 +8,34 @@
     top 0px
     left 0px
     width 320px
-    height 40px
-    padding 8px
-    box-sizing border-box
+    
+.app-header__corner
+    $size = 40px
+    width $size
+    height $size
     background-color rgba(0,0,0,0.5)
-    border-radius 0 0 10px 10px
+    color $white
+    font-size $font-size-m
+    text-align center
+    line-height $size
+
+.app-header__corner--right
+    border-radius 0 0 0 8px
     box-shadow 0 1px 1px rgba(0,0,0,0.4)
+
+.app-header__corner--left
+    border-radius 0 0 8px 0
+    box-shadow 0 1px 1px rgba(0,0,0,0.4);
+
+.app-header__center
+    $size = 32px
+    width 240px
+    height $size
+    box-sizing border-box
+    padding 4px 12px
+    background-color rgba(0,0,0,0.5)
+    line-height $size
+    box-shadow 0px -1px 1px rgba(0,0,0,0.4)
 
 .app-header__status
     height 10px
@@ -22,7 +44,7 @@
     line-height 10px
 
 .app-header__status__gauge
-    width 180px
+    width 80px
     height 10px
     background-color $beige-deep
     box-sizing border-box
