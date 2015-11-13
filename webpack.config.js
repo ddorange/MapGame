@@ -63,6 +63,7 @@ var config = {
 // vendorを追加
 config.addVendor('lodash',      bower_dir + '/lodash/dist/lodash.underscore.min.js');
 config.addVendor('jquery',      bower_dir + '/jquery/dist/jquery.min.js');
+config.addVendor('hammerjs',    bower_dir + '/hammerjs/hammer.min.js');
 config.addVendor('vue',         bower_dir + '/vue/dist/vue.min.js');
 config.addVendor('vue-router',  bower_dir + '/vue-router/dist/vue-router.min.js');
 
