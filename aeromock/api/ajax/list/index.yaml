@@ -1,5 +1,4 @@
 # /list
-
 characters:
   -
     id: 1
@@ -16,6 +15,14 @@ characters:
   -
     id: 4
     name: コンゴウ
+    TYPE: battleship
+  -
+    id: 4
+    name: ヒエイ
+    TYPE: battleship
+  -
+    id: 4
+    name: イセ
     TYPE: battleship
 
 wepons:
